@@ -1,0 +1,19 @@
+{
+    "code": {
+        "cpp":  "#include <iostream>\nusing namespace std;\n$comment_open\n$summary\n$comment_close\nint main() {\n    \n}",
+        "py":   "import os\n$comment_open\n$summary\n$comment_close\ndef main():\n    pass"
+    },
+    "comment": {
+        "cpp": ["/*", "*/"],
+        "py": ["\"\"\"", "\"\"\""]
+    },
+    "lang": {
+        "c++": "cpp",
+        "c+": "cpp",
+        "cpp": "cpp",
+        "python": "py",
+        "python3": "py",
+        "python2": "py",
+        "py": "py"
+    }
+}
