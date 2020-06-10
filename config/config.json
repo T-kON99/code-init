@@ -1,7 +1,7 @@
 {
     "code": {
-        "cpp":  "#include <iostream>\nusing namespace std;\n$comment_open\n$summary\n$comment_close\nint main() {\n    \n}",
-        "py":   "import os\n$comment_open\n$summary\n$comment_close\ndef main():\n    pass"
+        "cpp":  "#include <iostream>\nusing namespace std;\n$comment_open\n$summary\n$comment_close\nint main() {\n\t\n\treturn 0;\n}",
+        "py": "import os\nimport time\n$comment_open\n$summary\n$comment_close\nif __name__ == \"__main__\":\n\tstart = time.time()\n\t\n\tprint(f'Finished in {round(time.time() - start, 3)} seconds')"
     },
     "comment": {
         "cpp": ["/*", "*/"],
