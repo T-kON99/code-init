@@ -2,10 +2,12 @@
 
 ![alt text](images/code-init.png "Code-Init")
 
-Initialize your competitive programming template after reading the problems, complete with the details of the problem. 
+Initialize your competitive programming template after reading the problems, complete with the details of the problem and any asset needed from the problem.
+
 Currently supports: 
 1. [uhunt](https://uhunt.onlinejudge.org/). 
 2. [ProjectEuler.net](https://projecteuler.net/)
+
 Future updates might include other sites.
 
 ## Getting Started
@@ -18,11 +20,19 @@ Future updates might include other sites.
 
 ### Installing
 
+#### Activating Virtual Env
 ```bash
-pip install ghostscript --user
-git clone https://github.com/T-kON99/code-init
+python -m venv env
+env/Scripts/activate # If you're on windows or
+env/bin/activate    # If you're on UNIX
+```
+
+#### Dependencies & Running
+```bash
+git clone https://github.com/T-kON99/code-init code-init
+pip install -r requirements.txt
 cd code-init
-python init.py -help
+python code-init.py -help
 ```
 
 ### Usage
@@ -38,7 +48,7 @@ python code-init.py -n 22 -lang py -p projecteuler -o
 
 ### Footnotes
 
-- All problems will be fetched and saved under      location `./problems`
+- All assets related to the problems will be fetched and saved under      location `./assets`. Configurable based on `./config/config.json`
 - Code file will be generated based from `./config/config.json`, configurable.
-- Tested with ghostscript v9.50 and below
+- Tested with `ghostscript v9.50` and below until `v8.x`
 - Enjoy and happy hunting!
