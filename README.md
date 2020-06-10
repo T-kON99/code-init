@@ -1,8 +1,12 @@
-# Code Init
+# Code-Init
 
-Initialize your competitive programming template after reading the problems, complete with the details of the problem. This tool is made specially for [uhunt](https://uhunt.onlinejudge.org/). Future updates might include other sites.
+![alt text](images/code-init.png "Code-Init")
 
-![alt text](https://uhunt.onlinejudge.org/images/uva.png "uhunt")
+Initialize your competitive programming template after reading the problems, complete with the details of the problem. 
+Currently supports: 
+1. [uhunt](https://uhunt.onlinejudge.org/). 
+2. [ProjectEuler.net](https://projecteuler.net/)
+Future updates might include other sites.
 
 ## Getting Started
 
