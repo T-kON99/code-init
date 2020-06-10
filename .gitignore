@@ -1,2 +1,15 @@
+#   Python related files
 __pycache__
-problems/
+
+#   Data files
+assets/
+
+#   Environment
+env/
+.vscode
+
+#   Exclude main file
+!/code-init.py
+#   Created files
+/*.py
+/*.cpp
