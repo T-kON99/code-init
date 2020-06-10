@@ -69,13 +69,16 @@ class Uhunt(Platform):
             overwrite
         )
         #   Convert to txt to extract problem details. Will be written as comment in the following source code file.
+        print(f'[INFO]: Converting PDF to TXT file to extract the text information')
         TEMP_FILE_CONVERT_TEXT_PATH = f'{config.ROOT}/assets/{self.PLATFORM_NAME}/p{problem_no}.txt'
+        print(f'[INFO]: Creating temporary TXT file {TEMP_FILE_CONVERT_TEXT_PATH}')
         if  overwrite or not os.path.isfile(TEMP_FILE_CONVERT_TEXT_PATH):
             read.pdfToText(FILE_PDF_PATH, TEMP_FILE_CONVERT_TEXT_PATH)
         with open(TEMP_FILE_CONVERT_TEXT_PATH, mode='r', encoding='utf8') as text_file:
             problem_details = '\n'.join([' '.join(_.split()) for _ in text_file.readlines()])
             # problem_details = '\n'.join([_.strip().split('\n')[0] if _.strip().split('\n')[0] not in ['Sample Input', 'Input', 'Sample Output', 'Output'] else '\n' + _.strip().split('\n')[0] for _ in text_file.readlines()])
         os.remove(TEMP_FILE_CONVERT_TEXT_PATH)
+        print(f'[INFO]: Deleted temporary TXT file {TEMP_FILE_CONVERT_TEXT_PATH}')
         return {
             'title': str(problem_no),
             'content': problem_details
