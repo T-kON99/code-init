@@ -5,7 +5,7 @@ import ghostscript
 
 def pdfToText(pdfFile, outputFile):
     args = [
-        "gswin64c", # actual value doesn't matter
+        "pdf2text", # actual value doesn't matter
         "-dNOPAUSE", "-dBATCH", "-dSAFER",
         "-sDEVICE=txtwrite",
         "-sOutputFile=" + outputFile,
@@ -18,7 +18,6 @@ def pdfToText(pdfFile, outputFile):
     ghostscript.Ghostscript(*args)
 
 def iteratePDFsFrom(path: str):
-    # r=root, d=directories, f = files
     for root, directory, files in os.walk(path):
         for file in files:
             if '.pdf' in file:
