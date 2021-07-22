@@ -33,7 +33,9 @@ parser.add_argument(
     help="Platform of the website (Example uhunt, projecteuler)",
     metavar="platform",
 )
-parser.add_argument("-o", dest="overwrite", action="store_true", help="Overwrite file")
+parser.add_argument(
+    "-f", dest="overwrite", action="store_true", help="Force overwrite file"
+)
 args = parser.parse_args()
 
 try:
