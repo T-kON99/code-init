@@ -39,11 +39,11 @@ python code-init.py -help
 
 > Initiate uhunt problem 787 as a python file
 ```bash
-python code-init.py -n 787 -lang py -p uhunt
+python code-init.py -n 787 --lang py -p uhunt
 ```
 > Force overwrite existing file, by default it will skip the file if it exists
 ```bash
-python code-init.py -n 22 -lang py -p projecteuler -o
+python code-init.py -n 22 --lang py -p projecteuler -f
 ```
 
 ### Footnotes
